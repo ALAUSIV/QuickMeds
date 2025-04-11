@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App name -->
+    <string name="app_name">QuickMeds</string>
+
+    <!-- Login screen -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Login</string>
+    <string name="register_prompt">Don’t have an account? Register</string>
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="login_success">Login Successful!</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="login_error_fields">Please fill all fields</string>
+
+    <!-- Register screen -->
+    <string name="full_name_hint">Full Name</string>
+    <string name="register_text">Register</string>
+    <string name="register_success">Registered Successfully</string>
+    <string name="register_error">Please fill all fields</string>
+
+    <!-- Forgot Password -->
+    <string name="forgot_password_title">Reset Your Password</string>
+    <string name="forgot_password_hint">Enter your registered email</string>
+    <string name="reset_password_button">Send Reset Link</string>
+    <string name="reset_password_success">A reset link was sent to</string>
+    <string name="reset_password_error">Please enter your email</string>
+
+    <!-- Greeting -->
+    <string name="greeting_text">Hello, Alex!</string>
+
+    <!-- Card Texts -->
+    <string name="book_appointment">Book Appointment</string>
+    <string name="prescriptions">Prescriptions</string>
+    <string name="medical_records">Medical Records</string>
+    <string name="find_pharmacy">Find Pharmacy</string>
+    <string name="health_history">Health History</string>
+    <string name="community_forum">Community Forum</string>
+
+    <!-- find Pharmacy Page -->
+    <string name="find_nearby_pharmacy">Find Nearby Pharmacy</string>
+    <string name="delivery_option">Choose Delivery Option</string>
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="select_insurance">Select Insurance Provider</string>
+    <string name="select_payment">Select Payment Method</string>
+
+</resources>

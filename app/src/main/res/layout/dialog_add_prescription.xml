@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/prescriptionName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Prescription Name"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/prescriptionDose"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Dose (e.g., 500mg)"
+        android:inputType="text"
+        android:layout_marginTop="8dp"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/prescriptionFrequency"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Frequency (e.g., Twice a day)"
+        android:inputType="text"
+        android:layout_marginTop="8dp"
+        android:padding="12dp" />
+</LinearLayout>
