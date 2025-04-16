@@ -34,5 +34,8 @@
         <activity android:name=".HealthHistoryActivity" />
         <activity android:name=".CommunityForumsActivity" />
 
+        <!-- Forum Topic Detail Page -->
+        <activity android:name=".ForumTopicActivity" />
+
     </application>
 </manifest>

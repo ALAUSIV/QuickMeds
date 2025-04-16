@@ -1,39 +1,97 @@
 package com.example.quickmeds;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MedicalRecordsActivity extends AppCompatActivity {
+
+    LinearLayout recordsContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_records);
 
-        LinearLayout recordsContainer = findViewById(R.id.recordsContainer);
+        recordsContainer = findViewById(R.id.recordsContainer);
 
-        String[] medicalRecords = {
-                " General Checkup – Jan 15, 2024: Blood pressure and heart rate normal.",
-                " Blood Test – Feb 10, 2024: Slightly low vitamin B12, advised supplements.",
-                " Prescription – Mar 5, 2024: Prescribed Ibuprofen 400mg for muscle pain.",
-                " Allergy Report – Apr 12, 2024: Seasonal pollen allergy confirmed.",
-                " Vaccination – May 22, 2024: Received second COVID-19 booster.",
-                " Cardiologist Visit – Jun 18, 2024: Mild arrhythmia, follow-up in 6 months.",
-                " Mental Health Session – Jul 3, 2024: Discussed anxiety coping strategies.",
-                " Dentist Visit – Aug 9, 2024: Routine cleaning, no cavities.",
-                " X-Ray – Sep 2, 2024: Chest X-ray, lungs clear.",
-                " Minor Surgery – Oct 11, 2024: Mole removal under local anesthesia, biopsy benign."
-        };
+        
+        addSection("Allergies", new String[]{
+                "Peanut Allergy",
+                "Pollen Sensitivity",
+                "Lactose Intolerance",
+                "Penicillin Allergy"
+        });
 
-        for (String record : medicalRecords) {
-            TextView recordTextView = new TextView(this);
-            recordTextView.setText(record);
-            recordTextView.setTextSize(16f);
-            recordTextView.setPadding(16, 12, 16, 12);
-            recordTextView.setTextColor(getResources().getColor(android.R.color.black));
-            recordsContainer.addView(recordTextView);
+        addSection("Medications", new String[]{
+                "Albuterol HFA 90mcg",
+                "Vitamin D 1000 IU",
+                "Ibuprofen 400mg",
+                "Amoxicillin 250mg"
+        });
+
+        addSection("Immunizations", new String[]{
+                "Flu Shot - Oct 2023",
+                "COVID-19 Booster - Aug 2023",
+                "Tetanus - Jul 2022",
+                "Hepatitis B - Feb 2021"
+        });
+
+        addSection("Lab Results", new String[]{
+                "HDL Cholesterol: 53.5 mg/dL",
+                "Blood Sugar: Normal - Feb 2023",
+                "TSH: 2.1 mIU/L",
+                "Vitamin B12: 460 pg/mL"
+        });
+
+        addSection("X-Rays", new String[]{
+                "Chest X-ray: Normal - Jan 2023",
+                "Arm X-ray: No fracture - Dec 2023",
+                "Dental X-ray: Routine - Oct 2022",
+                "Knee X-ray: Mild inflammation - Aug 2022"
+        });
+
+        addSection("Visits", new String[]{
+                "Annual Checkup - Jan 2023",
+                "Dermatologist Visit - Nov 2023",
+                "ENT Visit - Sep 2022",
+                "Eye Exam - May 2022"
+        });
+    }
+
+    private void addSection(String title, String[] records) {
+        // Section title
+        TextView header = new TextView(this);
+        header.setText(title);
+        header.setTextSize(16f);
+        header.setTypeface(null, Typeface.BOLD);
+        header.setTextColor(Color.WHITE);
+        header.setPadding(20, 16, 20, 16);
+        header.setBackgroundColor(Color.parseColor("#0A2342")); // Navy Blue
+
+        recordsContainer.addView(header);
+
+        for (String record : records) {
+            TextView detail = new TextView(this);
+            detail.setText(record);
+            detail.setTextSize(15f);
+            detail.setTextColor(Color.DKGRAY);
+            detail.setBackgroundResource(R.drawable.bg_card_rounded);
+            detail.setPadding(24, 20, 24, 20);
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+            );
+            params.setMargins(0, 8, 0, 24);
+            detail.setLayoutParams(params);
+
+            recordsContainer.addView(detail);
         }
     }
 }

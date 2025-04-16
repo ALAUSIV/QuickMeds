@@ -1,7 +1,6 @@
 package com.example.quickmeds;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -19,6 +18,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appointment);
 
+
         specialtySpinner = findViewById(R.id.specialtySpinner);
         locationSpinner = findViewById(R.id.locationSpinner);
         timeSlotSpinner = findViewById(R.id.timeSlotSpinner);
@@ -29,10 +29,12 @@ public class BookAppointmentActivity extends AppCompatActivity {
         String[] locations = {"Downtown Clinic", "Uptown Health Center", "Suburban Medical"};
         String[] timeSlots = {"10:00 AM", "12:30 PM", "3:00 PM", "5:15 PM"};
 
+
         specialtySpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, specialties));
         locationSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, locations));
         timeSlotSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, timeSlots));
 
+        // book button click
         bookAppointmentButton.setOnClickListener(view -> {
             String specialty = specialtySpinner.getSelectedItem().toString();
             String location = locationSpinner.getSelectedItem().toString();

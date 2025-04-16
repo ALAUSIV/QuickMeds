@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#FFF8E1">
 
+    <!-- Header -->
     <LinearLayout
-        android:id="@+id/forumContainer"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:background="#FFCC33"
         android:padding="16dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_forum"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Community Forums"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#111"
-            android:layout_marginBottom="12dp" />
+            android:textColor="#000000" />
     </LinearLayout>
-</ScrollView>
+
+    <!-- Scrollable Forum Container -->
+    <ScrollView
+        android:id="@+id/forumScroll"
+        android:layout_below="@id/header"
+        android:layout_above="@+id/addTopicButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="72dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/forumContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Floating Add Button -->
+    <ImageView
+        android:id="@+id/addTopicButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_topic"
+        android:contentDescription="Add topic"
+        android:background="@android:color/transparent" />
+</RelativeLayout>

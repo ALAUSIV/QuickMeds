@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="@drawable/medical_records_background"
+    android:padding="20dp"
+    android:fadeScrollbars="true"
+    android:scrollbars="vertical">
 
     <LinearLayout
         android:id="@+id/recordsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@android:color/transparent"
+        android:paddingBottom="40dp">
 
         <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
+            android:id="@+id/recordsTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your Medical Records"
-            android:textSize="20sp"
+            android:text="Medical Records"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#111"
-            android:layout_marginBottom="12dp" />
+            android:textColor="#0A2342"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- dynamic content will be inserted below -->
 
     </LinearLayout>
 </ScrollView>
