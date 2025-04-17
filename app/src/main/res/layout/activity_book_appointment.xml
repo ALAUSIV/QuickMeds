@@ -3,7 +3,7 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_doctor_soft"
+    android:background="#AFD1FD"
     android:padding="24dp">
 
     <LinearLayout
@@ -79,7 +79,7 @@
             android:text="Book Appointment"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:backgroundTint="#007BFF"
+            android:backgroundTint="#1564BE"
             android:padding="16dp" />
     </LinearLayout>
 

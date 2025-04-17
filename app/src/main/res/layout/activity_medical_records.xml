@@ -3,7 +3,7 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/medical_records_background"
+    android:background="#AFD1FD"
     android:padding="20dp"
     android:fadeScrollbars="true"
     android:scrollbars="vertical">
@@ -20,12 +20,12 @@
             android:id="@+id/recordsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Medical Records"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#0A2342"
+            android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:layout_marginBottom="20dp" />
+            android:text="Medical Records"
+            android:textColor="#0A2342"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <!-- dynamic content will be inserted below -->
 

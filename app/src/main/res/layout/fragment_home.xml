@@ -3,17 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:background="#AFD1FD">
 
     <!-- Background Image -->
-    <ImageView
-        android:id="@+id/backgroundImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/home_background"
-        android:scaleType="centerCrop"
-        android:contentDescription="Background"
-        android:alpha="13" />
+
 
     <!-- Foreground Layout -->
     <LinearLayout
